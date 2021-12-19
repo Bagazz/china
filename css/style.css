@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6
 }
 body
 {
+    background-color: #F5F5F5;
 	cursor: default;
 	font-size: small;
 }
@@ -24,7 +25,8 @@ body
 	padding: .75em;
     margin-top:25px;
     margin-bottom: 25px;
-    width: 448px;
+    max-width: 448px;
+    border-radius: 10px;
 }
 
 .ecw-box
@@ -105,9 +107,8 @@ body
 .ecw-crosswordarea
 {
 	background-color: #D0D8E0;
-	border-color: #808080;
-	border-style: solid;
-	border-width: 2px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
 	padding: .5em;
 	font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
 	font-size: small;
@@ -149,10 +150,11 @@ body
 
 button{
     border-style: solid;
+    border-radius: 3px;
 }
 
 .full_body{
-    height: 100%;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
