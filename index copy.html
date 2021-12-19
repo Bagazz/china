@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Эмпиризм v1.5</title>
+    <meta name="generator" content="EclipseCrossword" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1></h1>
+    <h3 style="margin-top: -1em;"></h3>
+
+    <div id="waitmessage" class="ecw-answerbox">
+        Мы тут как бы юзали джавускрипт...
+    </div>
+
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+
+            <td class="ecw-crosswordarea">
+
+                <script src="js/partOne.js"></script>
+
+                <script src="js/partTwo.js"></script>
+
+            </td>
+
+            <td valign="top" style="padding-left: 1em;">
+
+                <div id="welcomemessage" class="ecw-answerbox" style="display:none;">
+                    <h3>Приветствуем!</h3>
+                    <p>Нажмите на скрытое слово в кроссворде, чтобы начать.</p>
+                </div>
+
+                <div id="answerbox" class="ecw-answerbox" style="display:none;">
+                    <h3 id="wordlabel" class="ecw-wordlabel"> &nbsp;</h3>
+                    <div id="wordinfo" class="ecw-wordinfo"> </div>
+                    <div id="wordclue" class="ecw-cluebox"> </div>
+                    <div style="margin-top: 1em;">
+                        <input class="ecw-input" id="wordentry" type="text" size="24"
+                            style="font-weight: bold; text-transform:uppercase;" onkeypress="WordEntryKeyPress(event)"
+                            onchange="WordEntryKeyPress(event)">
+                    </div>
+                    <div id="worderror" class="ecw-worderror"></div>
+
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%" style="margin-top:1em;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button id="cheatbutton" type="button" class="ecw-input ecw-button" onclick="CheatClick();">Ответить</button>
+                                </td>
+                                <td text-align="right">
+                                    <button id="okbutton" type="button" class="ecw-input ecw-button"
+                                        onclick="OKClick();" style="font-weight: bold;">Окей</button> &nbsp;
+                                    <button id="cancelbutton" type="button" class="ecw-input ecw-button"
+                                        onclick="DeselectCurrentWord();">Закрыть</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div id="congratulations" class="ecw-answerbox" style="display:none;">
+                    <h3>Поздравляем!</h3>
+                    <p>Вы решили данный кроссворд!<br>Хотите пройти ещё раз? Тогда перезагрузите страницу!</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="margin-top: 1em;">
+        <button id="checkbutton" type="button" onclick="CheckClick();" style="display: none;">Вывести результат</button>
+    </div>
+
+    <script src="js/partThree.js"></script>
+</body>
+
+</html>
